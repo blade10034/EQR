@@ -1,4 +1,3 @@
-import createHistory from 'history/lib/createBrowserHistory';
-import useQueries from 'history/lib/useQueries';
+import createHistory from 'history/createBrowserHistory';
 
-export default useQueries(createHistory) ();
+export default createHistory();

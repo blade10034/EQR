@@ -1,5 +1,5 @@
 import React from 'react';
-import history from '../router/history';
+import history from '../../router/history';
 
 class Navbar extends React.Component {
     

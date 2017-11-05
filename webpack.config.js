@@ -1,8 +1,14 @@
 var path = require('path');
 
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
+  template: 'index.html',
+  filename: 'index.html'
+})
+
 module.exports = [{
     context: path.join(__dirname, 'src', 'app'),
-    entry: 'app',
+    entry: ['babel-polyfill', './app'],
     output: {
         path: path.join(__dirname, 'src', 'app'),
         filename: 'bundle.js'
@@ -18,5 +24,6 @@ module.exports = [{
     resolve: {
         extensions: ['.js', '.jsx'],
         modules: ['node_modules']
-    }
+    },
+    plugins: [HtmlWebpackPluginConfig]
 }];

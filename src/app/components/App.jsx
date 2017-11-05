@@ -1,29 +1,13 @@
 import React from 'react';
-import history from '../router/history';
-import router from '../router/router';
-import routes from '../router/routes';
+import history from '../../router/history';
+import router from '../../router/router';
+import routes from '../../router/routes';
+import Navbar from './Navbar';
 
-export default class App extends React.Component {
-    render(location) {
-        return (
-            <div>
-                <Navbar />
-                <Main />
-            </div>
-        )
-    }
-}
-
-class Main extends React.Component () {
-    render() {
-        return (
-            
-        );
-    }
-}
+const mainContainer = document.getElementById('main');
 
 function renderComponent(component) {
-    ReactDom.render(component, main);
+        ReactDom.render(component, mainContainer);
 }
 
 function render(location) {
@@ -33,5 +17,24 @@ function render(location) {
         .then(renderComponent));
 }
 
-render(history.getCurrentLocation());
-history.listen(render);
+export default class App extends React.Component {
+    constructor(props){
+        super(props);
+
+        render(history.location);
+        history.listen(render);
+
+    }
+
+    render() {
+        return (
+            <div>
+                <Navbar />
+                <div id="main"></div>
+            </div>
+        );
+    }
+}
+
+
+
