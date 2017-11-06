@@ -4,7 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
   template: 'index.html',
   filename: 'index.html'
-})
+});
 
 module.exports = [{
     context: path.join(__dirname, 'src', 'app'),

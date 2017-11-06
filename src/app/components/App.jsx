@@ -2,7 +2,10 @@ import React from 'react';
 import history from '../../router/history';
 import router from '../../router/router';
 import routes from '../../router/routes';
+
 import Navbar from './Navbar';
+// import Schedule from './schedule/Main';
+// import Timesheet from './timesheet/Main';
 
 const mainContainer = document.getElementById('main');
 
@@ -35,6 +38,3 @@ export default class App extends React.Component {
         );
     }
 }
-
-
-

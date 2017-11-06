@@ -9,8 +9,8 @@ export default class Schedule extends React.Component {
     render(){
         return (
             <div>
-                HAIII
+                <h1>Schedule</h1>
             </div>
-        )
+        );
     }
 }
